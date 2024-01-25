@@ -3,7 +3,7 @@
     --black: #333;
     --light-color: #777;
     --border: .1rem solid rgba(0, 0, 0, .2);
-    --box-shadow: 0.5rem 1rem rgb(0, 0, 0, .1);
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
 }
 
 * {
@@ -85,7 +85,7 @@ section {
     color: var(--black);
     background: #eee;
     border-radius: 50%;
-    margin-left: 0.7rem;
+    margin-left: .7rem;
     font-size: 1.7rem;
     cursor: pointer;
 }
@@ -126,8 +126,8 @@ section {
 
 .header .search-form label {
     font-size: 2rem;
-    padding-left: .5rem;
-    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-right: .5rem;
     cursor: pointer;
     color: var(--black);
 }
@@ -166,7 +166,7 @@ section {
 }
 
 .banner .content p {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     color: var(--light-color);
     padding: 1rem 0;
     line-height: 1.5;
@@ -179,7 +179,7 @@ section {
     background: #eee;
 }
 
-.container .posts-container .posts {
+.container .posts-container .post {
     width: 100%;
     padding: 2rem;
     background: #fff;
@@ -214,7 +214,7 @@ section {
     padding: 1rem 0;
 }
 
-.container .posts-container .post .links {
+.container .posts-container .links {
     border-top: var(--border);
     margin-top: .5rem;
     padding-top: 1.5rem;
@@ -236,7 +236,7 @@ section {
 }
 
 .container .posts-container .links a i {
-    padding-right: inherit;
+    padding-right: .2rem;
     color: var(--black);
 }
 
@@ -255,7 +255,6 @@ section {
     background: #fff;
     margin-bottom: 1.5rem;
 }
-
 
 .container .sidebar .box .title {
     padding: 1.5rem;
@@ -290,7 +289,6 @@ section {
     padding: 1rem;
 }
 
-
 .container .sidebar .box .about .follow {
     padding: 1rem 0;
 }
@@ -311,12 +309,12 @@ section {
 }
 
 .container .sidebar .box .category {
-    padding: 1rem 1.rem;
+    padding: 1rem 1.5rem;
 }
 
 .container .sidebar .box .category a {
     padding: .4rem 0;
-    font-size: 1.rem;
+    font-size: 1.5rem;
     color: var(--black);
     display: flex;
     align-items: center;
@@ -363,7 +361,7 @@ section {
 }
 
 .container .sidebar .box .p-post a:hover h3 {
-    color: var(--orange)
+    color: var(--orange);
 }
 
 .container .sidebar .box .tags {
@@ -379,7 +377,6 @@ section {
     border: var(--border);
     margin: .5rem;
 }
-
 
 .container .sidebar .box .tags a:hover {
     background: var(--black);
@@ -452,7 +449,6 @@ section {
     padding: 1rem 0;
 }
 
-
 .footer .follow a {
     height: 4.5rem;
     line-height: 4.5rem;
@@ -461,7 +457,7 @@ section {
     font-size: 1.7rem;
     background: var(--black);
     color: #fff;
-    margin: 0.1rem;
+    margin: 0 .1rem;
     text-align: center;
 }
 
@@ -471,7 +467,18 @@ section {
 
 
 
-/* media queries */
+
+
+
+
+
+
+
+
+
+
+/* media queries  */
+
 @media (max-width:991px) {
 
     html {
@@ -487,21 +494,13 @@ section {
     }
 
     .container {
-        grid-template-columns: 1fr;
-        gap: 0;
+        grid-template-columns: 2fr 1fr;
     }
 
-    .container .posts-container .post .image {
-        height: 30rem;
-    }
-
-    .footer {
-        flex-flow: column;
-        text-align: var(--orange);
-    }
 }
 
 @media (max-width:768px) {
+
     #menu-bars {
         display: inline-block;
     }
@@ -537,8 +536,23 @@ section {
         margin: 1.5rem;
         border-radius: .5rem;
         border: var(--border);
-
     }
+
+    .container {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .container .posts-container .post .image {
+        height: 30rem;
+        ;
+    }
+
+    .footer {
+        flex-flow: column;
+        text-align: center;
+    }
+
 }
 
 @media (max-width:450px) {
@@ -550,4 +564,5 @@ section {
     .contact form .inputBox input {
         width: 100%;
     }
+
 }
